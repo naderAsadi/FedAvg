@@ -1,0 +1,42 @@
+name: 'sweep'
+project: 'FedAvg'
+method: grid
+metric:
+  goal: maximize
+  name: test/avg_acc
+program: fed_avg.py
+
+parameters:
+  n_client_epochs: # E
+    values: [20]
+  batch_size: # B
+    values: [10]
+  non_iid: # 0: IID, 1: Non-IID
+    values: [1]
+  lr:
+    values: [0.01, 0.001]
+
+  # Setting
+  model_name:
+    value: "cnn"
+  n_clients:
+    value: 100
+  n_shards:
+    value: 200
+  frac:
+    value: 0.1
+  n_epochs:
+    value: 1000
+  
+  device:
+    value: 1
+  log_every:
+    value: 1
+  early_stopping:
+    value: 1
+  
+  # Defaults
+  wandb:
+    value: 1
+  exp_name:
+    value: "sweep"
