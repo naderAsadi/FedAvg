@@ -6,7 +6,7 @@ Implementation of [FedAvg](http://proceedings.mlr.press/v54/mcmahan17a/mcmahan17
 
 ### Dependencies
 
-CLHive requires **Python 3.6+**.
+Requires **Python 3.6+**.
 
 - numpy>=1.22.4
 - pytorch>=1.12.0
